@@ -173,7 +173,8 @@ export const ConfigForm: React.FC = () => {
   const chartRef = React.useRef(null);
 
   React.useEffect(() => {
-    window["vchart"] = chartRef;
+    // @ts-expect-error vchart usage
+    window['vchart'] = chartRef;
   }, []);
 
   const spec: IAreaChartSpec = React.useMemo(() => {
