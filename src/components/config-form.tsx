@@ -208,126 +208,128 @@ export const ConfigForm: React.FC = () => {
   return (
     <>
       <Form layout="horizontal" getFormApi={(v) => setFormApi(v)} initValues={initValue}>
+        <div style={{ display: 'flex' }}>
 
-        <Form.Section text="通用配置部分">
-          <Form.InputNumber
-            label="当前年份"
-            field="currentYear"
-            style={{ marginBottom: '16px' }}
-          />
-        </Form.Section>
+          <Form.Section text="通用配置部分">
+            <Form.InputNumber
+              label="当前年份"
+              field="currentYear"
+              style={{ marginBottom: '16px' }}
+            />
+          </Form.Section>
 
-        <Form.Section text="银行卡账户收入部分">
-          <Form.InputNumber
-            label="现有余额"
-            field="currentMount"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="到手月工资"
-            field="monthlySalary"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="年终奖到手部分"
-            field="yearEndBonus"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="年投资增长率"
-            field="annualInterestRate"
-            style={{ marginBottom: '16px' }}
-          />
-        </Form.Section>
+          <Form.Section text="银行卡账户收入部分">
+            <Form.InputNumber
+              label="现有余额"
+              field="currentMount"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="到手月工资"
+              field="monthlySalary"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="年终奖到手部分"
+              field="yearEndBonus"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="年投资增长率"
+              field="annualInterestRate"
+              style={{ marginBottom: '16px' }}
+            />
+          </Form.Section>
 
-        <Form.Section text="公积金账户收入部分">
-          <Form.InputNumber
-            label="现有余额"
-            field="fundCurrentMount"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="每月缴纳公积金金额"
-            field="monthlyFund"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="公积金利率"
-            field="fundRate"
-            formatter={value => `${value}%`}
-            parser={value => value.replace('%', '')}
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="默认每个月公积金提取金额"
-            field="defaultFundWithdrawal"
-            disabled
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.Checkbox
-            field="fullWithdrawal"
-            style={{ marginBottom: '16px' }}
-            noLabel
-          >
-            公积金是否能全额提取
-          </Form.Checkbox>
-        </Form.Section>
+          <Form.Section text="公积金账户收入部分">
+            <Form.InputNumber
+              label="现有余额"
+              field="fundCurrentMount"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="每月缴纳公积金金额"
+              field="monthlyFund"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="公积金利率"
+              field="fundRate"
+              formatter={value => `${value}%`}
+              parser={value => value.replace('%', '')}
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="默认每个月公积金提取金额"
+              field="defaultFundWithdrawal"
+              disabled
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.Checkbox
+              field="fullWithdrawal"
+              style={{ marginBottom: '16px' }}
+              noLabel
+            >
+              公积金是否能全额提取
+            </Form.Checkbox>
+          </Form.Section>
 
-        <Form.Section text="房产部分">
-          <Form.InputNumber
-            label="房产价格"
-            field="propertyMount"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="房产增值速率"
-            field="propertyRate"
-            formatter={value => `${value}%`}
-            parser={value => value.replace('%', '')}
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="房产月度额外支出"
-            field="propertyAddonExpense"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="贷款利率"
-            field="loanRate"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="首付比例"
-            field="downPaymentRate"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="贷款年限"
-            field="loanYears"
-            style={{ marginBottom: '16px' }}
-          />
-        </Form.Section>
+          <Form.Section text="房产部分">
+            <Form.InputNumber
+              label="房产价格"
+              field="propertyMount"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="房产增值速率"
+              field="propertyRate"
+              formatter={value => `${value}%`}
+              parser={value => value.replace('%', '')}
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="房产月度额外支出"
+              field="propertyAddonExpense"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="贷款利率"
+              field="loanRate"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="首付比例"
+              field="downPaymentRate"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="贷款年限"
+              field="loanYears"
+              style={{ marginBottom: '16px' }}
+            />
+          </Form.Section>
 
-        <Form.Section text="支出部分">
-          <Form.InputNumber
-            label="月租房支出"
-            field="monthlyRent"
-            style={{ marginBottom: '16px' }}
-          />
-          <Form.InputNumber
-            label="月生活支出"
-            field="monthlyLivingExpense"
-            style={{ marginBottom: '16px' }}
-          />
-        </Form.Section>
-        <Button onClick={() => {
-          if (formApi) {
-            const values = formApi?.getValues();
-            setInitValue(values);
-          }
-        }}>
-          Calculate
-        </Button>
+          <Form.Section text="支出部分">
+            <Form.InputNumber
+              label="月租房支出"
+              field="monthlyRent"
+              style={{ marginBottom: '16px' }}
+            />
+            <Form.InputNumber
+              label="月生活支出"
+              field="monthlyLivingExpense"
+              style={{ marginBottom: '16px' }}
+            />
+          </Form.Section>
+          <Button onClick={() => {
+            if (formApi) {
+              const values = formApi?.getValues();
+              setInitValue(values);
+            }
+          }}>
+            Calculate
+          </Button>
+        </div>
       </Form >
       <VChart ref={chartRef} spec={spec} />
     </>
