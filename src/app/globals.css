@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+@import '~@douyinfe/semi-ui/dist/css/semi.min.css';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
